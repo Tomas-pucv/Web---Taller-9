@@ -1,0 +1,24 @@
+$kind: http-request
+description: Paso 4. Debería responder 401.
+url: "{{baseUrl}}/api/login"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "ana",
+      "password": "contraseña-incorrecta"
+    }
+auth:
+  type: noauth
+scripts:
+  - type: afterResponse
+    code: |-
+      // Guarda el token en la variable {{token}} de la colección.
+      if (pm.response.code === 200) {
+        pm.collectionVariables.set("token", pm.response.json().token);
+      }
+    language: text/javascript
+order: 4000

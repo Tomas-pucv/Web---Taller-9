@@ -1,0 +1,9 @@
+$kind: http-request
+description: Paso 7. Con el token de carla debería responder 204.
+url: "{{baseUrl}}/api/posts/5"
+method: DELETE
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 15000

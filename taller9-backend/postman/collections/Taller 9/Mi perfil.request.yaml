@@ -1,0 +1,9 @@
+$kind: http-request
+description: "Paso 5. Ruta protegida: debería responder 200 con los datos del usuario del token."
+url: "{{baseUrl}}/api/usuarios/yo"
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 6000

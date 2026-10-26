@@ -1,0 +1,7 @@
+$kind: http-request
+description: "Paso 5. Debería responder 401: Token requerido."
+url: "{{baseUrl}}/api/usuarios/yo"
+method: GET
+auth:
+  type: noauth
+order: 7000

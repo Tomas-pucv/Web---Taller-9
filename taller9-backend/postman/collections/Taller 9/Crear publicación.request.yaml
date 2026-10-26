@@ -1,0 +1,19 @@
+$kind: http-request
+description: Paso 7. Debería responder 201. Observa que el userId de la respuesta es el del token, no el del body.
+url: "{{baseUrl}}/api/posts"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "userId": 3,
+      "title": "Publicación de ana",
+      "body": "Creada desde Postman con un token"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 9000

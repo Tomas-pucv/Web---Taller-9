@@ -1,0 +1,16 @@
+$kind: http-request
+description: Paso 7. Debería responder 401.
+url: "{{baseUrl}}/api/posts"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "Sin token",
+      "body": "Esta publicación no debería crearse"
+    }
+auth:
+  type: noauth
+order: 10000

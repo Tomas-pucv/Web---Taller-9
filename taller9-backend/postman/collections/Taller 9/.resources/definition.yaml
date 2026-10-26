@@ -1,0 +1,5 @@
+$kind: collection
+description: Peticiones para probar la autenticación y autorización del Taller 9. Las peticiones de login guardan el token en la variable {{token}}.
+variables:
+  baseUrl: http://localhost:3000
+  token: ""

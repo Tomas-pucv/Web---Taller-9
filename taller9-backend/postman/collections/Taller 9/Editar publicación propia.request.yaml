@@ -1,0 +1,18 @@
+$kind: http-request
+description: "Paso 7. La publicación 1 es de ana: debería responder 200."
+url: "{{baseUrl}}/api/posts/1"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "Bienvenidos al Taller 9 (editado)",
+      "body": "Editada por su autora"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 11000

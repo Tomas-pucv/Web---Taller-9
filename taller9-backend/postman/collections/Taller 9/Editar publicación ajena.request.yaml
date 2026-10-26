@@ -1,0 +1,18 @@
+$kind: http-request
+description: "Paso 7. La publicación 5 es de carla: con el token de ana debería responder 403."
+url: "{{baseUrl}}/api/posts/5"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "Intento de ana",
+      "body": "Esta edición no debería permitirse"
+    }
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 12000

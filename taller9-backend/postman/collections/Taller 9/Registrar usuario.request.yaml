@@ -1,0 +1,16 @@
+$kind: http-request
+description: Paso 3. Debería responder 201. Si la envías de nuevo, 409.
+url: "{{baseUrl}}/api/usuarios"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "username": "daniela",
+      "password": "daniela-12345"
+    }
+auth:
+  type: noauth
+order: 2000

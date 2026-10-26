@@ -1,0 +1,9 @@
+$kind: http-request
+description: "Paso 6. El token tiene un carácter de más al final. Debería responder 401: Token inválido."
+url: "{{baseUrl}}/api/usuarios/yo"
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}x"
+order: 8000
